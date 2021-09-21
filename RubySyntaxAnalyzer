@@ -1,0 +1,7 @@
+
+
+
+#read a file
+file = File.open("users.txt")
+#// 
+#goal to have the same type of output as the example in the book(+,-,*,/)
