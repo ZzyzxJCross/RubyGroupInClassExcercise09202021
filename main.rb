@@ -14,14 +14,11 @@ end
 class Lexer
   def initialize
     @inFile = File.read(ARGV[0])
-    print("The text of the input file is: #@inFile \n")
     @scanIndex = 0
     @lexemeArray = Array.new
     @tokenArray = Array.new
     @tokenTypeArray = Array.new
   end
-
-
 
   #works through the file and updates the array of token objects
   def fineScanner()
@@ -42,10 +39,6 @@ class Lexer
         while(@inFile[@scanIndex + indexAugment] =~ /[0-9]/)
           workingStr.push(@inFile[@scanIndex + indexAugment])
 
-          print("workingStr is " + workingStr[0] + " ")
-          print("indexAugment is " + indexAugment.to_s + " ")
-          print("@inFile[@scanIndex + indexAugment] is " + @inFile[@scanIndex + indexAugment] + "\n")
-
           indexAugment = indexAugment + 1
           indexJump = indexJump + 1
         end
@@ -57,10 +50,6 @@ class Lexer
         while(@inFile[@scanIndex + indexAugment] =~ /[a-z]/i)
           workingStr.push(@inFile[@scanIndex + indexAugment])
 
-          print("workingStr is " + workingStr[0] + " ")
-          print("indexAugment is " + indexAugment.to_s + " ")
-          print("@inFile[@scanIndex + indexAugment] is " + @inFile[@scanIndex + indexAugment] + "\n")
-
           indexAugment = indexAugment + 1
           indexJump = indexJump + 1
         end
@@ -71,18 +60,13 @@ class Lexer
         @tokenTypeArray.push(workingChar)
         while(@inFile[@scanIndex + indexAugment] =~ /[+\-*\/\(\)]/)
           workingStr.push(@inFile[@scanIndex + indexAugment])
-
-          print("workingStr is " + workingStr[0] + " ")
-          print("indexAugment is " + indexAugment.to_s + " ")
-          print("@inFile[@scanIndex + indexAugment] is " + @inFile[@scanIndex + indexAugment] + "\n")
-
+          
           indexAugment = indexAugment + 1
           indexJump = indexJump + 1
         end
       end
 
       @scanIndex = @scanIndex + indexJump
-      puts("the character" + workingStr.to_s + "was found")
       @lexemeArray.push("#{workingStr.join("")}")
     end
     puts(@lexemeArray.to_s)
@@ -95,8 +79,7 @@ class Lexer
     for j in @tokenArray
       puts(j.to_s() + "\n")
     end
-  end
-  
+  end 
 end
 
 test = Lexer.new
