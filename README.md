@@ -1,5 +1,5 @@
 # Ruby Eco Simulation
-This Repo is intended to facilitate our submission for the in-class exercise.
+This Repo is intended to facilitate our submission for the in-class exercise. This is a Lexer that is able to take text from a .txt file and seperate different strings and numbers, as well as other operators such as + and -. Each outputted value will be seperated accordingly if its neighbors are the same type, and each will be given a token to determine their type.
 
 # Quickstart
 We have prepared a special stakeholder link to view our code at the site Repl.it
@@ -22,6 +22,14 @@ bundle exec ruby main.rb input.txt
 In order to change the data it is using, navigate to input.txt and alter the contained information.
 
 
+# Files
+main.rb is where all of the code is located for our project. 
+
+input.txt is the file that our code uses in its commands. Changing this will change the code that is outputted when running main.rb
+
+
+
+# The Team
 
 | Group Members  |
 | ---            |
