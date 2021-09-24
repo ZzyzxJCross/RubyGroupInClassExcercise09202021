@@ -14,7 +14,7 @@ You can install Ruby through the following site:
 https://www.ruby-lang.org/en/documentation/installation/
 
 
-In order to run the Lexer, you need to first have the input.txt file in the same folder as lexerParser.rb
+In order to run the Lexer, you need to first have the input.txt file in the same folder as main.rb
 Once they are in the same folder, navigate to the folder they are in with the terminal and run the following command:
 
 bundle exec ruby main.rb input.txt
