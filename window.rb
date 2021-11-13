@@ -22,7 +22,7 @@ def display_board
      puts row
      puts separator
      puts row
-end  
+end
 
 display_board(board)
 
@@ -36,6 +36,8 @@ class Bunnies
 i = bunnies
 
 while i > 0
+ sort_by { rand }
+
 
 
 show
